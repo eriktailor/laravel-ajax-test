@@ -29,7 +29,7 @@
                     type: 'get',
                     url: '/students',
                     data: { page: page },
-                    datatype: 'html',
+                    dataType: 'html',
                     success: function(res) {
                         page++;
 
