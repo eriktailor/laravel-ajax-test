@@ -14,11 +14,8 @@ class StudentController extends Controller
     {   
         $students = Student::paginate(5);
 
-        if ($request->ajax()) {
-
-			$html = view('list', compact('students'))->render();
-  
-            return response()->json($html);
+        if ($request->ajax()) {  
+            return view('list', compact('students'))->render();
 		}
         
         return view('student', compact('students'));

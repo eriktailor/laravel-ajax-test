@@ -28,7 +28,13 @@
                     datatype: 'html',
                     success: function(res) {
                         page++;
-                        $('#studentsContainer').append(res);
+
+                        // hide the new items initially
+                        var newItems = $(res).hide();
+
+                        // slidedown the new items
+                        $('#studentsContainer').append(newItems);
+                        newItems.slideDown();
                     }
                 }); 
             });
